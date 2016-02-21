@@ -20,7 +20,8 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   */
 
   int x,y;
-  // Octent 1 or 5?
+  //-- Octent 1 or 5?
+  /*
   if ( x0 > x1 && y0 > y1 ){ //swap the two so its up and right
     x = x0;
     x0 = x1;
@@ -29,7 +30,12 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     y0 = y1;
     y1 = y;
   }
-
+  */
+  if (x0 > x1){//only drawing left to right, i.e. Octents 1,2,7,8
+    x = x0;
+    x0 = x1;
+    x1 = x;
+  }
 
   //check to see of octent 1:
   if ( (x1 - x0) >= (y1 - y1) ){
