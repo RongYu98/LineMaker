@@ -20,9 +20,8 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   */
 
   int x,y;
-  //-- Octent 1 or 5?
-  /*
-  if ( x0 > x1 && y0 > y1 ){ //swap the two so its up and right
+
+  if ( x0 > x1 ){ //swap the two so its up and right
     x = x0;
     x0 = x1;
     x1 = x;
@@ -30,15 +29,10 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     y0 = y1;
     y1 = y;
   }
-  */
-  if (x0 > x1){//only drawing left to right, i.e. Octents 1,2,7,8
-    x = x0;
-    x0 = x1;
-    x1 = x;
-  }
 
   //check to see of octent 1:
-  if ( (x1 - x0) >= (y1 - y1) ){
+  if ( (x1 - x0) >= (y1 - y0) && (y1 - y0) > 0 ){
+    printf("Octent 1\n");
     x = x0;
     y = y0;
     int A = y1 - y0;
@@ -54,9 +48,24 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
       x += 1;
       d += 2*A;
     }
-  }
-  //save_ppm( s, "stuff.ppm" ); 
+  } else if ( (y1 - y0) > 0 ){ //octent 2
 
+    // Do stuff
+    printf("Octent 2\n");
+
+  } else if ( (x1 - x0)  > ( (y1 - y0) *-1 ) ) {//octent 8
+
+    printf("Ocetent 8 \n");
+    //Octnet 8
+  } else {
+
+    //Octent 7
+    printf("Octent 7\n");
+    
+  }
+
+
+    
 
 }
 
