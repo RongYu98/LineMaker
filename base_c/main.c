@@ -86,8 +86,8 @@ int main() {
   int x,y;
   int xcor = 0;
   int ycor = 0;
-  while (xcor < XRES){
-    while (ycor < YRES){
+  while (xcor < XRES/20){
+    while (ycor < YRES/20){
       
       x = xer(z) % XRES;
       y = yer(z) % YRES;
