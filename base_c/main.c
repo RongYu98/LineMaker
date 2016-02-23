@@ -10,14 +10,14 @@
 int xer(int x) {
   // f(x) = ( 2x^2 - 5x + 5) / (x - 2)
   int a = (int)( 2*x*x*x - 5*x + 5 ) / (x + 2 );
-  return x;
+  return a;
 }
 int yer(int y){
   // 4 cos2x siny = 1
   //siny = 1/4cos2x
   double a = (.25 * cos(y*3 * 180 / 3.141592653589 ) );
-  y = (int) asin(a);
-  return y;
+  int z = (int) asin(a);
+  return (y+z);
 }
 
 int main() {
