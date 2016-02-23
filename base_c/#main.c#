@@ -78,7 +78,7 @@ int main() {
   save_extension(s, "lines.png");
   c.red = 0;
   c.green = 0;
-  c.blue = 205;
+  c.blue = 1;
 
   clear_screen(s);
   
@@ -91,13 +91,12 @@ int main() {
       
       x = xer(z);
       y = yer(z);
-      c.red = (x+y) % 255;
       draw_line(XRES, YRES, x,y,s,c);
+      x.blue
       ycor++;
       z++;
     }
     xcor++;
-    c.green = (x+y) % 255;
   }
   save_extension(s, "cool.png");
 }  
