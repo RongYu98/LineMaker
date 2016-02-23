@@ -86,17 +86,17 @@ int main() {
   int x,y;
   int xcor = 0;
   int ycor = 0;
-  while (xcor < XRES/20){
-    while (ycor < YRES/20){
+  while (xcor < XRES){
+    while (ycor < YRES){
       
       x = xer(z) % XRES;
       y = yer(z) % YRES;
       c.red = (x+y) % 255;
       draw_line(xcor, ycor, x,y,s,c);
-      ycor++;
+      ycor+=10;
       z++;
     }
-    xcor++;
+    xcor+=10;
     c.green = (x+y) % 255;
   }
   save_extension(s, "cool.png");
