@@ -83,7 +83,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 	d += 2*B;
       }
       x += 1;
-      d += 2*A;
+      d -= 2*A;
     }
     
   } else { ////////////////////////////////////Octent 7
