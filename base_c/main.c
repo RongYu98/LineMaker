@@ -86,13 +86,13 @@ int main() {
   int x,y;
   int xcor = 0;
   int ycor = 0;
-  while (xcor < YRES/10){
-    while (ycor < YRES/10){
+  while (xcor < XRES){
+    while (ycor < YRES){
       
-      x = xer(z);
-      y = yer(z);
+      x = xer(z) % XRES;
+      y = yer(z) % YRES;
       c.red = (x+y) % 255;
-      draw_line(XRES, YRES, x,y,s,c);
+      draw_line(xcor, ycor, x,y,s,c);
       ycor++;
       z++;
     }
