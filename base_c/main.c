@@ -16,8 +16,8 @@ int yer(int y){
   // 4 cos2x siny = 1
   //siny = 1/4cos2x
   double a = (.25 * cos(y*3 * 180 / 3.141592653589 ) );
-  int z = (int) asin(a);
-  return (y+z);
+  y = (int) asin(a);
+  return y;
 }
 
 int main() {
@@ -93,10 +93,10 @@ int main() {
       y = yer(z) % YRES;
       c.red = (x+y) % 255;
       draw_line(xcor, ycor, x,y,s,c);
-      ycor+=10;
+      ycor+=5;
       z++;
     }
-    xcor+=10;
+    xcor+=5;
     c.green = (x+y) % 255;
   }
   save_extension(s, "cool.png");
