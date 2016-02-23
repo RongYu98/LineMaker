@@ -1,10 +1,24 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 #include "ml6.h"
 #include "display.h"
 #include "draw.h"
+
+int xer(int x) {
+  // f(x) = ( 2x^2 - 5x + 5) / (x - 2)
+  int a = (int)( 2*x*x - 5*x + 5 ) / (x + 2 );
+  return x;
+}
+int yer(int y){
+  // 4 cos2x siny = 1
+  //siny = 1/4cos2x
+  double a = (.25 * cos(y*3 * 180 / 3.141592653589 ) );
+  y = (int) asin(a);
+  return y;
+}
 
 int main() {
 
@@ -62,4 +76,24 @@ int main() {
 
   //display(s);
   save_extension(s, "lines.png");
+  c.red = 0;
+
+  clear_screen(s);
+  
+  int z = 0;
+  int x,y;
+  int xcor = 0;
+  int ycor = 0;
+  while (xcor < XRES){
+    while (ycor < YRES){
+      
+      x = xer(z);
+      y = yer(z);
+      draw_line(XRES, YRES, x,y,s,c);
+      ycor++;
+      z++;
+    }
+    xcor++;
+  }
+  save_extension(s, "cool.png");
 }  

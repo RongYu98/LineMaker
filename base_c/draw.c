@@ -39,7 +39,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
   
   //check to see of octent 1:
   if ( (x1 - x0) >= (y1 - y0) && (y1 - y0) > 0 ){
-    printf("Octent 1\n");
+    //printf("Octent 1\n");
     //x = x0;
     //y = y0;
     //int A = y1 - y0;
@@ -58,7 +58,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     }
   } else if ( (y1 - y0) > 0 ){ //octent 2
     
-    printf("Octent 2\n");
+    //printf("Octent 2\n");
     d = A + 2*B;
 
     while ( y <= y1 ) {
@@ -73,7 +73,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     
   } else if ( (x1 - x0)  > ( (y1 - y0) *-1 ) ) {//octent 8
 
-    printf("Ocetent 8 \n");
+    //printf("Ocetent 8 \n");
     d = 2*A - B;
 
     while ( x <= x1 ){
@@ -88,7 +88,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     
   } else { ////////////////////////////////////Octent 7
 
-    printf("Octent 7\n");
+    //printf("Octent 7\n");
     d = A - 2*B;
 
     while ( y >= y1 ){
