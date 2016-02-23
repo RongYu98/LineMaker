@@ -91,13 +91,13 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
     printf("Octent 7\n");
     d = A - 2*B;
 
-    while ( y <= y1 ){
+    while ( y >= y1 ){
       plot( s,c,x,y );
       if ( d > 0){
 	x += 1;
 	d += 2*A;
       }
-      y += 1;
+      y -= 1;
       d += 2*B;
     }
   } 
