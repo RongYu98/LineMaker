@@ -86,8 +86,8 @@ int main() {
   int x,y;
   int xcor = 0;
   int ycor = 0;
-  while (xcor < XRES/5){
-    while (ycor < YRES/5){
+  while (xcor < YRES/10){
+    while (ycor < YRES/10){
       
       x = xer(z);
       y = yer(z);
