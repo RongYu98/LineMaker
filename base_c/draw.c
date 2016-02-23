@@ -75,6 +75,16 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 
     printf("Ocetent 8 \n");
     d = 2*A - B;
+
+    while ( x <= x1 ){
+      plot( s,c,x,y );
+      if ( d > 0 ){
+	y -= 1;
+	d -= 2*B;
+      }
+      x += 1;
+      d += 2*A;
+    }
     
   } else { ////////////////////////////////////Octent 7
 
