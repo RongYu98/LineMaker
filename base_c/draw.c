@@ -78,7 +78,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 
     while ( x <= x1 ){
       plot( s,c,x,y );
-      if ( d < 0 ){ //too right, go down and right
+      if ( d > 0 ){ //too right, go down and right
 	y -= 1;
 	d += 2*B;
       }
