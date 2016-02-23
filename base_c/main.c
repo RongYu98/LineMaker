@@ -9,7 +9,7 @@
 
 int xer(int x) {
   // f(x) = ( 2x^2 - 5x + 5) / (x - 2)
-  int a = (int)( 2*x*x - 5*x + 5 ) / (x + 2 );
+  int a = (int)( 2*x*x*x - 5*x + 5 ) / (x + 2 );
   return x;
 }
 int yer(int y){
