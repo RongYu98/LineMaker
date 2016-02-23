@@ -77,6 +77,8 @@ int main() {
   //display(s);
   save_extension(s, "lines.png");
   c.red = 0;
+  c.green = 0;
+  c.blue = 205;
 
   clear_screen(s);
   
