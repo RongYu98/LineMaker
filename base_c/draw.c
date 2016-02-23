@@ -93,7 +93,7 @@ void draw_line(int x0, int y0, int x1, int y1, screen s, color c) {
 
     while ( y >= y1 ){
       plot( s,c,x,y );
-      if ( d > 0){
+      if ( d < 0){
 	x += 1;
 	d += 2*A;
       }
